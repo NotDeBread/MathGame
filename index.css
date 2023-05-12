@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bouncy: cubic-bezier(0,2,.75,1);
+}
+
+body {
+  margin: 0;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+
+#damageVignette {
+  position: absolute;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  /* box-shadow: inset 0px 0px 100px red; */
+}
+
+.damageVignetteAnim {
+  animation: damagevignette 0.5s ease-out 1 forwards;
+}
+
+@keyframes damagevignette {
+  from {
+    box-shadow: inset 0px 0px 100px red;
+  }
+  to {
+    box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0);
+  }
+}
+
+#vignette {
+  position: absolute;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.vignetteAnim {
+  animation: vignette 60s ease-out 1 forwards;
+}
+
+@keyframes vignette {
+  from {
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  to {
+    box-shadow: inset 0px 0px 100px 50px black;
+  }
+}
+
+
+#menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(25, 25, 25);
+  position: absolute;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.startButton {
+  background-color: rgb(35, 35, 35);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: 3px solid rgb(40, 40, 40);
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.25em;
+}
+
+.startButton:hover {
+  scale: 105%;
+}
+
+.menuFooter {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}
+
+.menuFooter img {
+  width: 300px;
+}
+
+#results {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(25, 25, 25);
+  position: absolute;
+  z-index: 7;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s;
+}
+
+#GUI {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 6;
+}
+
+#score {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+#multiplier {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.multiplierAnim {
+  animation: multiplier 0.5s ease-out 1 forwards;
+}
+
+@keyframes multiplier {
+  from {
+    scale: 150%;
+  }
+  to {
+    scale: 100%;
+  }
+}
+
+.inputContainer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#gridContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#grid {
+  width: 300px;
+  height: 300px;
+  outline: 3px solid white;
+  border-radius: 5px;
+  background-color: rgb(10, 10, 10);
+}
+
+#questionContainer {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+#question {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+input {
+  background-color: rgb(35, 35, 35);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  border: 3px solid rgb(40, 40, 40);
+}
+
+.inputContainer input:focus {
+  outline: none;
+  filter: brightness(110%);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

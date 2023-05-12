@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Funny Math Game</title>
+</head>
+
+<body>
+
+    <div id="damageVignette"></div>
+
+    <div id="vignette"></div>
+
+    <section id="menu">
+        <div style="text-align: center;">
+            <span>Welcome to funny math game</span><br>
+            <span>Answer as many questions about linear equations as you can in 60 seconds</span>
+        </div>
+        <button class="startButton" onclick="start()">BEGIN</button>
+        <a class="menuFooter" href="https://debread.space" target="_blank">
+            <img src="logo.png">
+        </a>
+    </section>
+    <section id="results">
+        <span style="font-size: 2em; font-weight: 700;">Results</span>
+        <div style="text-align: center;">
+            <span id="resultScore">Score: 0</span><br>
+            <span id="resultQuestions">Questions Answered: 0</span>
+        </div>
+        <button class="startButton" onclick="window.location.reload()">Try Again</button>
+    </section>
+    <div id="GUI">
+        <span style="position: absolute; top: 10px; left: 10px;">SCORE:</span>
+        <span id="score">0</span>
+        <span id="multiplier">x1</span>
+    </div>
+    <div class="inputContainer">
+        <span id="questionTitle">Question title goes here...</span><br>
+        <div id="gridContainer">
+            <img id="grid">
+        </div>
+        <div id="questionContainer">
+            <span id="question">Question goes here...</span>
+        </div>
+        <input type="text" id="input">
+        <span id="timer">60</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
